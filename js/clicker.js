@@ -37,17 +37,17 @@ let active = false; // exempel för att visa att du kan lägga till klass för a
 
 let achievements = [
     {
-        description: 'Museet är redo att öppna, grattis! ',
+        description: 'Det har börjat ',
         requiredUpgrades: 1,
         acquired: false,
     },
     {
-        description: 'Nu börjar det likna något, fortsätt gräva!',
+        description: 'Folket börjar lita på dig',
         requiredUpgrades: 10,
         acquired: false,
     },
     {
-        description: 'Klickare, med licens att klicka!',
+        description: 'Klickare, med licens att ljuga!',
         requiredClicks: 10,
         acquired: false,
     },
@@ -163,22 +163,72 @@ window.addEventListener('load', (event) => {
  */
 upgrades = [
     {
-        name: 'Sop',
+        name: 'Propagandera Tidningar',
         cost: 10,
         amount: 1,
     },
     {
-        name: 'Kvalitetsspade',
+        name: 'Församlings tal',
         cost: 50,
         clicks: 2,
     },
     {
-        name: 'Skottkärra',
+        name: 'Censurera Nyheter',
         cost: 100,
         amount: 10,
     },
     {
-        name: 'Grävmaskin',
+        name: 'Tysta Journalister',
+        cost: 1000,
+        amount: 100,
+    },
+    {
+        name: 'Skyll ifrån på dina fiender',
+        cost: 1000,
+        amount: 100,
+    },
+    {
+        name: 'Skriv om Historia',
+        cost: 1000,
+        amount: 100,
+    },
+    {
+        name: 'Nationella Sanningsrådet',
+        cost: 1000,
+        amount: 100,
+    },
+    {
+        name: 'Skapa en fiende åt Folket',
+        cost: 1000,
+        amount: 100,
+    },
+    {
+        name: 'Militarisera Polisen',
+        cost: 1000,
+        amount: 100,
+    },
+    {
+        name: 'Inleda Övervakningsstaten',
+        cost: 1000,
+        amount: 100,
+    },
+    {
+        name: 'Lojalitets Prov',
+        cost: 100,
+        amount: 10,
+    },
+    {
+        name: 'Förebildiga Medborgare',
+        cost: 1000,
+        amount: 100,
+    },
+    {
+        name: 'Skriv om Lexikon',
+        cost: 1000,
+        amount: 100,
+    },
+    {
+        name: 'BIG BROTHER',
         cost: 1000,
         amount: 100,
     },
