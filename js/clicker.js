@@ -180,56 +180,56 @@ upgrades = [
     {
         name: 'Tysta Journalister',
         cost: 1000,
-        amount: 100,
+        amount: 20,
     },
     {
         name: 'Skyll ifrån på dina fiender',
-        cost: 1000,
-        amount: 100,
+        cost: 1500,
+        clicks: 5,
     },
     {
         name: 'Skriv om Historia',
-        cost: 1000,
-        amount: 100,
+        cost: 2500,
+        amount: 50,
     },
     {
         name: 'Nationella Sanningsrådet',
-        cost: 1000,
+        cost: 4000,
         amount: 100,
     },
     {
         name: 'Skapa en fiende åt Folket',
-        cost: 1000,
-        amount: 100,
+        cost: 6000,
+        clicks: 10,
     },
     {
         name: 'Militarisera Polisen',
-        cost: 1000,
-        amount: 100,
+        cost: 7500,
+        clicks: 25,
     },
     {
-        name: 'Inleda Övervakningsstaten',
-        cost: 1000,
-        amount: 100,
+        name: 'Värma mer Övervakningsteknik',
+        cost: 10000,
+        amount: 200,
     },
     {
         name: 'Lojalitets Prov',
-        cost: 100,
-        amount: 10,
+        cost: 15000,
+        amount: 300,
     },
     {
         name: 'Förebildiga Medborgare',
-        cost: 1000,
-        amount: 100,
+        cost: 25000,
+        amount: 500,
     },
     {
         name: 'Skriv om Lexikon',
-        cost: 1000,
-        amount: 100,
+        cost: 30000,
+        clicks: 150,
     },
     {
-        name: 'BIG BROTHER',
-        cost: 1000,
+        name: 'Initiera Nya Världsordningen (rebirth)',
+        cost: 1000000,
         amount: 100,
     },
 ];
@@ -263,14 +263,14 @@ function createCard(upgrade) {
     } else {
         header.textContent = `${upgrade.name}, +${upgrade.clicks} per klick.`;
     }
-    cost.textContent = `Köp för ${upgrade.cost} benbitar.`;
+    cost.textContent = `Köp för ${upgrade.cost} Lojalitet.`;
 
     card.addEventListener('click', (e) => {
         if (money >= upgrade.cost) {
             acquiredUpgrades++;
             money -= upgrade.cost;
             upgrade.cost *= 1.5;
-            cost.textContent = 'Köp för ' + upgrade.cost + ' benbitar';
+            cost.textContent = 'Köp för ' + upgrade.cost + ' Lojalitet';
             moneyPerSecond += upgrade.amount ? upgrade.amount : 0;
             moneyPerClick += upgrade.clicks ? upgrade.clicks : 0;
             message('Grattis du har köpt en uppgradering!', 'success');
