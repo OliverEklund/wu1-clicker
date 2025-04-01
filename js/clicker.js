@@ -208,7 +208,7 @@ upgrades = [
         clicks: 25,
     },
     {
-        name: 'Värma mer Övervakningsteknik',
+        name: 'Värva mer Övervakningsteknik',
         cost: 10000,
         amount: 200,
     },
@@ -228,7 +228,7 @@ upgrades = [
         clicks: 150,
     },
     {
-        name: 'Initiera Nya Världsordningen (rebirth)',
+        name: 'Initiera en Ny order (rebirth)',
         cost: 1000000,
         amount: 100,
     },
