@@ -112,8 +112,11 @@ audio {
 
 /* flex och space between ordnar layouten för speldata och knappen på desktop */
 .game-hud {
+    background-color: #590016;
     display: flex;
     justify-content: space-between;
+    top: 0;
+    position: sticky
 }
 
 .game-currency {
@@ -142,7 +145,7 @@ audio {
     width: var(--space-4xl-5xl);
     height: var(--space-4xl-5xl);
     font-size: var(--step-2);
-    background: url('https://pngimg.com/uploads/buttons/buttons_PNG52.png');
+    background: url('https://i.ibb.co/8Lp1HGSY/button.png');
     background-size: cover;
     background-position: center;
     border: 2px solid transparent;
