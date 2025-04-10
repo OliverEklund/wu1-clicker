@@ -55,7 +55,7 @@ let achievements = [
         description: 'Tac-2 god!',
         requiredClicks: 10000,
         acquired: false,
-    },
+    }
 ];
 
 /* Med ett valt element, som knappen i detta fall så kan vi skapa listeners
@@ -228,9 +228,10 @@ upgrades = [
         clicks: 150,
     },
     {
-        name: 'Initiera en Ny order (rebirth)',
+        name: 'Initiera en Ny order (Win)',
         cost: 1000000,
         amount: 100,
+        win: true
     },
 ];
 
@@ -269,10 +270,14 @@ function createCard(upgrade) {
         if (money >= upgrade.cost) {
             acquiredUpgrades++;
             money -= upgrade.cost;
-            upgrade.cost *= 1.5;
+            upgrade.cost *= 1.2;
             cost.textContent = 'Köp för ' + upgrade.cost + ' Lojalitet';
             moneyPerSecond += upgrade.amount ? upgrade.amount : 0;
             moneyPerClick += upgrade.clicks ? upgrade.clicks : 0;
+            if (upgrade.win) {
+                message("Du vann!", "success")
+                window.cancelAnimationFrame(step)
+            }
             message('Grattis du har köpt en uppgradering!', 'success');
         } else {
             message('Du har inte råd.', 'warning');
